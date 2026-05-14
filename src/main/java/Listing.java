@@ -1,13 +1,11 @@
 public class Listing {
-    private String title;
     private int quantity;
     private boolean soldOut;
 
-    public Listing(String title, int quantity) {
+    public Listing(String ignoredTitle, int quantity) {
         if (quantity < 1) {
             throw new IllegalArgumentException("Quantity must be at least 1");
         }
-        this.title = title;
         this.quantity = quantity;
         updateStatus();
     }
@@ -31,4 +29,5 @@ public class Listing {
     public boolean isSoldOut() {
         return soldOut;
     }
+
 }
