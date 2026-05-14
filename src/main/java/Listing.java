@@ -4,7 +4,7 @@ public class Listing {
     private boolean soldOut;
 
     public Listing(String title, int quantity) {
-        if (quantity &lt; 1) {
+        if (quantity < 1) {
             throw new IllegalArgumentException("Quantity must be at least 1");
         }
         this.title = title;
